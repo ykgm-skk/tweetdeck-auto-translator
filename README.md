@@ -13,7 +13,9 @@ This Chrome extension is an unpackaged and must be installed using developer mod
 - Select the downloaded one
 
 # Usage
-Right-click on the extension icon and select "option" to open the setting window. Set the languages to be translated and the language to translate to. Tweetdeck needs to be reloaded after changing the extension settings.
+Right-click on the extension icon and select "option" to open the settings window. Set the languages to be translated and the language to translate to. Tweetdeck needs to be reloaded after changing the extension settings.
+
+**Provisional Action: Read the Issues section and set up the GAS API endpoint**
 
 Then...
 
@@ -23,8 +25,18 @@ Enjoy!
 
 # Issues
 ## LanguageApp (GAS) Limit Rates
-This extension uses Google Apps Script's LanguageApp to do the translation.
-At the moment, I have created an API endpoint with my personal Google account, so if used by many people, it may be trapped by the API's frequency limit.
+The API endpoint using the LanguageApp class of GAS probably has a limit rate of 10,000 times per day. Therefore, it is difficult to share one endpoint with users of this extension.
 
-(I tried to find out the specific limit rate, but it was not clear to me...)
+So...
 
+### How to create a translation API endpoint with GAS
+1. Access the GAS dashboard `https://script.google.com/home`
+2. Create **New project**
+3. Copy and paste the content of `gas/api.js` from this repository
+4. Click the save button 💾 above the editor
+5. Click the **Deploy** button and select **New Deployment**
+    - choose **Web app** for type, **Me** *(your e-mail address)* for "Execute as", and **Anyone** for "Who has access"
+    - then click "Deploy".
+6. Copy the displayed **Web app URL**, paste it into the API endpoint field of settings window.
+
+That's all. It will work up to 10,000 translations per day.

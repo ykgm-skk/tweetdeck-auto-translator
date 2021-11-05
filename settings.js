@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         chrome.storage.local.set({
             'target': document.getElementById('target').value,
-            'sources': checked
+            'sources': checked,
+            'endpoint': document.getElementById('endpoint').value
         });
 
         window.alert('Saved.');

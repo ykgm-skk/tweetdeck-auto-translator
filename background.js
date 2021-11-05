@@ -1,10 +1,11 @@
-const endpoint = 'https://script.google.com/macros/s/AKfycbxdBex_DygDQF9HgmDsrccyxDy4s_Ll1atxpt5dqS7OQMs6Ru3lHqonUmcw-7X92raE/exec';
+let endpoint = '';
 let sources = [];  // default sources
 let target = 'en';  // default target
 
-chrome.storage.local.get(['target', 'sources'], function (items) {
+chrome.storage.local.get(['target', 'sources', 'endpoint'], function (items) {
     target = items.target;
     sources = items.sources;
+    endpoint = items.endpoint;
 });
 
 async function autoTranslate() {
