@@ -28,3 +28,4 @@ At the moment, I have created an API endpoint with my personal Google account, s
 
 (I tried to find out the specific limit rate, but it was not clear to me...)
 
+👉After all, I found that there is a API limit (10,000 requests/d?) so I'll consider the API to use...plz wait :(
