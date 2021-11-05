@@ -29,7 +29,7 @@ The API endpoint using the LanguageApp class of GAS probably has a limit rate of
 
 So...
 
-### How to create a translation API endpoint with GAS
+### How to create *your* translation API endpoint with GAS
 1. Access the GAS dashboard `https://script.google.com/home`
 2. Create **New project**
 3. Copy and paste the content of `gas/api.js` from this repository
