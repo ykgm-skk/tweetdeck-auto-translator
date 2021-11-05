@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="settings.js"></script>
+  </head>
+  <body>
+    <h1>Settings</h1>
+    <h2>Target Language</h2>
+    <select id="target">
+        <option value="en">English</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="ko">Korean</option>
+    </select>
+
+    <h2>Source Languages</h2>
+    <div id="sources">
+        <input type="checkbox" value="en" />English
+        <input type="checkbox" value="ja" />Japanese
+        <input type="checkbox" value="zh" />Chinese
+        <input type="checkbox" value="ko" />Korean
+    </div>
+    <p>💡The tweet to be translated is determined based on Tweetdeck's language detection (i.e. lang attribute of the DOM).</p>
+    <button id="save">Save</button>
+  </body>
+</html>
